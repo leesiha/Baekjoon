@@ -1,7 +1,7 @@
 // 참고 : https://cryptosalamander.tistory.com/54
 // DFS 재귀 공부
 #include <iostream>
-#define MAX 8 //visited에서 0은 사용하지 않는다.
+#define MAX 8
 using namespace std;
 
 int n, m;
