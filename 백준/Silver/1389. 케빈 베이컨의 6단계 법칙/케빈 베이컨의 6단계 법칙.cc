@@ -5,7 +5,6 @@
 using namespace std;
 
 int rel[MAX][MAX]; // index 0 미사용
-int min_bacon = 600, answer;
 int main()
 {
     int n, m;
@@ -18,7 +17,7 @@ int main()
         {
             if (i == j)
                 continue;
-            rel[i][j] = 6; // 모든 사람들은 최대 6단계 이내에서 서로 아는 사람으로 연결될 수 있다.
+            rel[i][j] = 9999; // 모든 사람들은 최대 6단계 이내에서 서로 아는 사람으로 연결될 수 있다.
         }
     }
 
@@ -44,6 +43,7 @@ int main()
     }
 
     // 답 찾기
+    int min_bacon = 999999, answer = -1;
     for (int i = 1; i <= n; i++)
     {
         int tmp = 0;
