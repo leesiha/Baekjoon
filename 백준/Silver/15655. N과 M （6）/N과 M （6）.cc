@@ -1,4 +1,4 @@
-// 참고 : https://donggoolosori.github.io/2020/10/13/boj-11660/
+// 참고 : https://cryptosalamander.tistory.com/55
 // DFS
 #include <iostream>
 #include <vector>
