@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int N, dist[100000], cost[100000];
+unsigned long long N, dist[100000], cost;
 
 int main()
 {
@@ -12,19 +12,22 @@ int main()
 
 	// input
 	cin >> N;
-	for (int i = 0; i < N-1; i++)
+	for (unsigned long long i = 0; i < N-1; i++)
 		cin >> dist[i];
-	for (int i = 0; i < N; i++)
-		cin >> cost[i];
+
+	unsigned long long min, result = 0;
 
 	// estimate
-	int min = cost[0];
-	int result = 0;
-	for (int i = 0; i < N; i++)
+	cin >> cost;
+	result += cost * dist[0];
+	min = cost;
+	for (unsigned long long i = 1; i < N-1; i++)
 	{
-		if (cost[i] < min)
-			min = cost[i];
+		cin >> cost;
+		if (cost < min)
+			min = cost;
 		result += min * dist[i];
 	}
+	cin >> cost; //ignore last value
 	cout << result;
 }
